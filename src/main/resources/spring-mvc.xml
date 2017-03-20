@@ -91,19 +91,25 @@
 			<property name="order" value="2"></property>
 		</bean>
 		
+		<mvc:resources mapping="/errors/**" location="/WEB-INF/template/errors/" />
 		<!-- 错误页面配置 -->
 		<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-<!-- 			<property name="defaultStatusCode" value="500"></property> -->
-			<!-- 定义默认的异常处理页面，当该异常类型的注册时使用 --> 
-			<property name="defaultErrorView" value="errors/error"></property>
-			<!-- 定义异常处理页面用来获取异常信息的变量名，默认名为exception -->
+<!-- 			定义默认的异常处理页面，当该异常类型的注册时使用  -->
+			<property name="defaultErrorView" value="errors/dataError"></property>
+<!-- 			定义异常处理页面用来获取异常信息的变量名，默认名为exception -->
 			<property name="exceptionAttribute" value="ex"></property>
-			<!-- 定义需要特殊处理的异常，用类名或完全路径名作为key，异常页面名作为值 -->
+<!-- 			定义需要特殊处理的异常，用类名或完全路径名作为key，异常页面名作为值 -->
 			<property name="exceptionMappings">
 				<props>
-					<prop key="java.lang.Exception">errors/error</prop>
-					<prop key="java.lang.Throwable">errors/error</prop>
+					<prop key="java.lang.Exception">errors/dataError</prop>
+					<prop key="java.lang.Throwable">errors/dataError</prop>
 				</props>
+			</property>
+			<property name="statusCodes">
+				<map>
+					<entry key="errors/notFound" value="404" />
+					<entry key="errors/dataError" value="500" />
+				</map>
 			</property>
 		</bean>
 </beans>

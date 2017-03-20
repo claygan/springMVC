@@ -16,4 +16,10 @@
 	<context:component-scan base-package="com.quest.controllers" use-default-filters="false">
 			<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
+	
+	<bean id="student" class="com.quest.pojos.Student">
+		<constructor-arg value="20"/>
+		<constructor-arg value="26"/>
+		<constructor-arg value="curry"/>
+	</bean>
 </beans>
