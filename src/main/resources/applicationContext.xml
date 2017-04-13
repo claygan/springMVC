@@ -17,6 +17,8 @@
 			<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 	
+	<bean id="serviceFactory" class="com.quest.commons.ServiceFactory"/>
+	
 	<bean id="student" class="com.quest.pojos.Student">
 		<constructor-arg value="20"/>
 		<constructor-arg value="26"/>
