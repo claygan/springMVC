@@ -13,10 +13,6 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
-	<!-- 配置spring上下文监听器，作用：在启动web容器时，就会自动装载applicationContext.xml -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
 	<!-- 配置spring字符编码过滤器 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
@@ -34,6 +30,10 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	<!-- 配置spring上下文监听器，作用：在启动web容器时，就会自动装载applicationContext.xml -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 	
 	<!-- spring分发器 -->
 	<servlet>

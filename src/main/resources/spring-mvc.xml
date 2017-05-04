@@ -38,9 +38,9 @@
 		<!-- 内容协商视图解析器；根据客户端的不同的请求决定不同的 view进行响应, 如 /blog/1.json /blog/1.xml -->
 		<!-- 会自动根据解析的contentType来决定使用哪个视图解析器（默认使用整个web应用中的viewResolver） -->
 		<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-			<!-- 内容协商管理器 用于决定media type -->
+<!-- 			内容协商管理器 用于决定media type -->
 			<property name="contentNegotiationManager" ref="contentNegotiationManager" />
-			<!-- 默认视图 放在解析链最后 -->
+<!-- 			默认视图 放在解析链最后 -->
 			<property name="defaultViews">
 				<list>
 					<bean class="com.alibaba.fastjson.support.spring.FastJsonJsonView" />
@@ -56,7 +56,7 @@
 			<property name="suffix" value=".html" />
 			<property name="contentType" value="text/html; charset=UTF-8" />
 			<property name="requestContextAttribute" value="request" />
-			<property name="order" value="1"></property>
+			<property name="order" value="1"/>
 		</bean>
 		<!-- freemarker配置 -->
 		<bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
@@ -88,16 +88,16 @@
 			<property name="suffix" value=".html" />
 			<property name="contentType" value="text/html;charset=UTF-8"/>
 			<property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView" />
-			<property name="order" value="2"></property>
+			<property name="order" value="2"/>
 		</bean>
 		
 		<mvc:resources mapping="/errors/**" location="/WEB-INF/template/errors/" />
 		<!-- 错误页面配置 -->
 		<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 <!-- 			定义默认的异常处理页面，当该异常类型的注册时使用  -->
-			<property name="defaultErrorView" value="errors/dataError"></property>
+			<property name="defaultErrorView" value="errors/dataError"/>
 <!-- 			定义异常处理页面用来获取异常信息的变量名，默认名为exception -->
-			<property name="exceptionAttribute" value="ex"></property>
+			<property name="exceptionAttribute" value="ex"/>
 <!-- 			定义需要特殊处理的异常，用类名或完全路径名作为key，异常页面名作为值 -->
 			<property name="exceptionMappings">
 				<props>
