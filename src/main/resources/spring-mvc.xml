@@ -61,7 +61,7 @@
 		<!-- freemarker配置 -->
 		<bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
 			<!-- 模板加载路径 -->
-			<property name="templateLoaderPath" value="/WEB-INF/template" />
+			<property name="templateLoaderPath" value="/WEB-INF/template/" />
 			<!-- 参数设置 -->
 			<property name="freemarkerSettings">
 				<props>
