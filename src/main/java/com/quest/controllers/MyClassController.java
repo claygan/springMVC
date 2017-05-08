@@ -19,6 +19,8 @@ public class MyClassController {
 		
 		Student student = ServiceFactory.getBean("student", Student.class);
 		model.addAttribute("studentInfo", student.study());
+		
+		request.getServletContext().getRealPath("");
 		return "student";
 	}
 }
