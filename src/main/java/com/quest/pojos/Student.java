@@ -20,8 +20,8 @@ public class Student extends MyClass{
 			System.out.println("This student is not regist!");
 			return "This student is not regist!";
 		}else{
-			System.out.println("My name is"+name+",I'm in "+classNum+"class,and my age is "+ age);
-			return "My name is"+name+",I'm in "+classNum+"class,and my age is "+ age;
+			System.out.println("My name is "+name+",I'm in "+classNum+" class,and my age is "+ age);
+			return "My name is "+name+",I'm in "+classNum+" class,and my age is "+ age;
 		}
 	}
 }

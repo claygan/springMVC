@@ -4,7 +4,7 @@
   <groupId>com.quest</groupId>
   <artifactId>springMVC</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>springMVC</name>
   
   <!-- 设置默认jdk版本是1.6 -->
@@ -195,6 +195,11 @@
 			  </exclusion>
 		  </exclusions>
 	  </dependency>
+	  <dependency>
+			<groupId>com.quest</groupId>
+			<artifactId>hessianService</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 	
 </project>
